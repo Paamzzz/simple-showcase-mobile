@@ -1,0 +1,125 @@
+html { //62.5% de 16px = 10px. Muito mais fácil de calcular o rem
+    font-size: 62.5%;
+}
+
+.profile {
+     background-color: rgb(255, 255, 255);
+     position: relative;
+}
+
+.profile-image-area {
+     z-index: 1;
+}
+
+.profile-main {
+     display: flex;
+     position: absolute;
+     flex-direction: column;
+     background-color: #fff;
+     width: 100vw;
+     height: auto;
+     min-height: 130vh;
+     border-radius: 60px 60px 0px 0px;
+     z-index: 100;
+     top: 80%;
+     color: rgb(0, 0, 0);
+     align-items: center; 
+     padding: 0 auto;
+}
+
+// Titulo principal
+.profile-header {
+     margin-top: 4rem;
+     text-align: center;
+     
+}
+
+.profile-header h2 {
+     line-height: 0.5;
+     font-size: clamp(1.5rem, 6vw, 1.8rem);
+     color: #957DAD;
+}
+
+.profile-header h1 {
+     font-size: clamp(1.8rem, 6vw, 3.2rem);
+     margin-top: 5px;
+     font-weight: 800;
+     color: #440485;
+     //Gradiente
+     background-image: linear-gradient(45deg, #1c0f4a , #8e3cd9 50%, #f72cff 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     display: inline-block;
+}
+
+// Cards e icones
+.profile-info {
+     margin-top: 4.5rem;
+     display: flex;
+     flex-direction: column;
+     gap: 80px;
+}
+
+.profile-card {
+     display: flex;
+     gap: 1rem;
+     border-radius: 10px;
+     width: 82vw;
+     height: 28vw;
+     padding: 4px;
+     text-align: center;
+     align-items: center;
+     border-top: #d4a6ff solid 3px;
+     background-color: #fcf7f7;
+     transition: all 0.3s;
+     justify-content: space-evenly;
+}
+
+.profile-card p {
+     font-size: clamp(1.1rem, 3vw, 2rem);
+     color: #2d0231;
+}
+
+.icon-container {
+     width: clamp(3.8rem, 10vw, 6rem);
+     height: clamp(3.8rem, 10vw, 6rem); // Height e width precisam ser iguais. 
+     min-width: clamp(4rem, 10vw, 6rem); //Evita distorção do icone, afetando o fundo
+    border-radius: 50%;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: #dbb5ff 0px 10px 20px;
+}
+
+.profile-icon {
+    color: #8e3cd9;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+
+// Seção CTA (Call To Action)
+.profile-cta {
+     margin: 100px 0 100px 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+
+.profile-cta p {
+     font-size: clamp(1.5rem, 4vw, 3rem);
+     font-weight: 500;
+     padding: 20px;
+     color: #4d015c;
+}
+.cta-button {
+     width: clamp(13rem, 40vw, 30rem);
+     height: clamp(3.5rem, 10vw, 10rem);
+     border-radius: 20px;
+     font-size:  clamp(1.3rem, 4vw, 2.5rem);
+     font-weight: 600;
+     background-image: linear-gradient(45deg, #f72cff , #8e3cd9 50%, #1c0f4a 100%);
+}
