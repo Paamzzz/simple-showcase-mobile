@@ -1,125 +1,212 @@
-html { //62.5% de 16px = 10px. Muito mais fácil de calcular o rem
+html {
     font-size: 62.5%;
 }
 
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* ===== CARD ===== */
+ion-card {
+    width: 100%;
+    max-width: 42rem;
+
+    border-radius: 2.5rem;
+    overflow: hidden;
+
+     background: linear-gradient(
+        180deg,
+        #f3ecfa 0%,
+        #ffffff 100%
+    );
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ESTRUTURA ===== */
 .profile {
-     background-color: rgb(255, 255, 255);
-     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* ===== IMAGEM ===== */
 .profile-image-area {
-     z-index: 1;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+
+    padding: 3rem 2rem 2rem 2rem;
 }
 
+.profile-image {
+    width: 16rem;
+    height: 16rem;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 5px solid #ffffff;
+
+    box-shadow: 0px 8px 20px rgba(142, 60, 217, 0.25);
+
+    object-position: center top;
+}
+
+/* ===== CONTEÚDO ===== */
 .profile-main {
-     display: flex;
-     position: absolute;
-     flex-direction: column;
-     background-color: #fff;
-     width: 100vw;
-     height: auto;
-     min-height: 130vh;
-     border-radius: 60px 60px 0px 0px;
-     z-index: 100;
-     top: 80%;
-     color: rgb(0, 0, 0);
-     align-items: center; 
-     padding: 0 auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
-// Titulo principal
+/* ===== HEADER ===== */
 .profile-header {
-     margin-top: 4rem;
-     text-align: center;
-     
+    text-align: center;
 }
 
 .profile-header h2 {
-     line-height: 0.5;
-     font-size: clamp(1.5rem, 6vw, 1.8rem);
-     color: #957DAD;
+    font-size: 1.6rem;
+    color: #957dad;
+
+    margin-bottom: 0.5rem;
 }
 
 .profile-header h1 {
-     font-size: clamp(1.8rem, 6vw, 3.2rem);
-     margin-top: 5px;
-     font-weight: 800;
-     color: #440485;
-     //Gradiente
-     background-image: linear-gradient(45deg, #1c0f4a , #8e3cd9 50%, #f72cff 100%);
-     background-clip: text;
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     display: inline-block;
+    font-size: 2.6rem;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    background-image: linear-gradient(
+        45deg,
+        #1c0f4a,
+        #8e3cd9 50%,
+        #f72cff 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-// Cards e icones
+/* ===== INFORMAÇÕES ===== */
 .profile-info {
-     margin-top: 4.5rem;
-     display: flex;
-     flex-direction: column;
-     gap: 80px;
-}
+    width: 100%;
 
-.profile-card {
-     display: flex;
-     gap: 1rem;
-     border-radius: 10px;
-     width: 82vw;
-     height: 28vw;
-     padding: 4px;
-     text-align: center;
-     align-items: center;
-     border-top: #d4a6ff solid 3px;
-     background-color: #fcf7f7;
-     transition: all 0.3s;
-     justify-content: space-evenly;
-}
-
-.profile-card p {
-     font-size: clamp(1.1rem, 3vw, 2rem);
-     color: #2d0231;
-}
-
-.icon-container {
-     width: clamp(3.8rem, 10vw, 6rem);
-     height: clamp(3.8rem, 10vw, 6rem); // Height e width precisam ser iguais. 
-     min-width: clamp(4rem, 10vw, 6rem); //Evita distorção do icone, afetando o fundo
-    border-radius: 50%;
-    margin-left: 15px;
-    align-items: center;
-    justify-content: center;
     display: flex;
-    box-shadow: #dbb5ff 0px 10px 20px;
+    flex-direction: column;
+
+    gap: 1.8rem;
+
+    margin-top: 3rem;
+}
+
+/* ===== CARDS ===== */
+.profile-card {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding: 1.5rem;
+
+    border-radius: 1.6rem;
+
+    background-color: #fcf7ff;
+
+    border-top: 4px solid #d4a6ff;
+
+    transition: 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== ÍCONE ===== */
+.icon-container {
+    width: 5rem;
+    height: 5rem;
+
+    min-width: 5rem;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    box-shadow: 0px 6px 15px rgba(219, 181, 255, 0.4);
 }
 
 .profile-icon {
+    font-size: 2.4rem;
     color: #8e3cd9;
-    font-size: clamp(2rem, 8vw, 3.5rem);
 }
 
+/* ===== TEXTO ===== */
+.profile-card p {
+    font-size: 1.4rem;
+    line-height: 1.5;
 
-// Seção CTA (Call To Action)
+    color: #2d0231;
+
+    margin: 0;
+}
+
+/* ===== CTA ===== */
 .profile-cta {
-     margin: 100px 0 100px 0;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     text-align: center;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
 }
 
 .profile-cta p {
-     font-size: clamp(1.5rem, 4vw, 3rem);
-     font-weight: 500;
-     padding: 20px;
-     color: #4d015c;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    color: #4d015c;
+
+    margin-bottom: 2rem;
 }
+
 .cta-button {
-     width: clamp(13rem, 40vw, 30rem);
-     height: clamp(3.5rem, 10vw, 10rem);
-     border-radius: 20px;
-     font-size:  clamp(1.3rem, 4vw, 2.5rem);
-     font-weight: 600;
-     background-image: linear-gradient(45deg, #f72cff , #8e3cd9 50%, #1c0f4a 100%);
+    width: 18rem;
+    height: 4.5rem;
+
+    border-radius: 1.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    background-image: linear-gradient(
+        45deg,
+        #f72cff,
+        #8e3cd9 50%,
+        #1c0f4a 100%
+    );
 }
