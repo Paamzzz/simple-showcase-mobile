@@ -1,0 +1,124 @@
+ion-content {
+    --background: linear-gradient(
+        180deg,
+        #f8f2ff 0%,
+        #ffffff 100%
+    );
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.tab2-container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+/* ===== CARD ===== */
+ion-card {
+    width: 100%;
+    max-width: 42rem;
+
+    border-radius: 2.5rem;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow: 0px 10px 30px rgba(142, 60, 217, 0.12);
+
+    transition: 0.3s ease;
+
+    margin-bottom: 2rem;
+}
+
+ion-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== IMAGEM ===== */
+ion-card img {
+    width: 100%;
+    height: 28rem;
+
+    object-fit: contain;
+
+    padding: 2rem;
+
+    background-color: #ffffff;
+}
+
+/* ===== HEADER ===== */
+ion-card-header {
+    text-align: center;
+
+    padding-top: 1rem;
+}
+
+/* ===== TITULO ===== */
+ion-card-title {
+    font-size: 2rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    color: #440485;
+}
+
+/* ===== CATEGORIA ===== */
+ion-card-subtitle {
+    margin-top: 0.8rem;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    color: #957dad;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* ===== CONTEÚDO ===== */
+ion-card-content {
+    text-align: center;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    color: #2d0231;
+
+    padding-bottom: 2rem;
+}
+
+/* ===== BOTÕES ===== */
+.buttons-area {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    gap: 1rem;
+}
+
+ion-button {
+    width: 20%;
+    height: 50px;
+    color: #f8f2ff;
+
+    --border-radius: 1.5rem;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    text-transform: none;
+
+    --background: #8e3cd9;
+
+    --box-shadow: 0px 8px 20px rgba(142, 60, 217, 0.25);
+}

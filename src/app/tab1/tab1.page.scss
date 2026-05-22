@@ -2,6 +2,10 @@ html {
     font-size: 62.5%;
 }
 
+ion-content {
+     --background: #efe5fa;
+}
+
 /* ===== CONTAINER PRINCIPAL ===== */
 .container {
     min-height: 100vh;
