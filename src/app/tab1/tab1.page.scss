@@ -50,12 +50,12 @@ ion-card {
     justify-content: center;
     border-radius: 50%;
 
-    padding: 3rem 2rem 2rem 2rem;
+//     padding: 3rem 2rem 2rem 2rem;
 }
 
 .profile-image {
-    width: 16rem;
-    height: 16rem;
+    width: 13rem;
+    height: 13rem;
 
     border-radius: 50%;
     object-fit: cover;
@@ -92,7 +92,7 @@ ion-card {
 }
 
 .profile-header h1 {
-    font-size: 2.6rem;
+    font-size: 2rem;
     font-weight: 800;
 
     line-height: 1.2;
@@ -170,47 +170,10 @@ ion-card {
 
 /* ===== TEXTO ===== */
 .profile-card p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 
     color: #2d0231;
 
     margin: 0;
-}
-
-/* ===== CTA ===== */
-.profile-cta {
-    margin-top: 3rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-}
-
-.profile-cta p {
-    font-size: 1.6rem;
-    font-weight: 500;
-
-    color: #4d015c;
-
-    margin-bottom: 2rem;
-}
-
-.cta-button {
-    width: 18rem;
-    height: 4.5rem;
-
-    border-radius: 1.5rem;
-
-    font-size: 1.5rem;
-    font-weight: 600;
-
-    background-image: linear-gradient(
-        45deg,
-        #f72cff,
-        #8e3cd9 50%,
-        #1c0f4a 100%
-    );
 }
