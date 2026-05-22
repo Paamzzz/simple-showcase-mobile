@@ -1,16 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-</ion-content>
+  <ion-button (click)="verTodos()" *ngIf="!mostrar">
+  Ver Todos os Produtos
+</ion-button>
+
+<ion-button color="danger" (click)="esconder()" *ngIf="mostrar">
+  Ocultar Lista
+</ion-button>
+
+<ion-card *ngFor="let p of todos" [routerDirection]="'forward'">
+  <img [src]="p.image"/>
+  <ion-card-header>
+    <ion-card-title>{{ p.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>R$ {{ p.price }}</ion-card-content>
+</ion-card>
